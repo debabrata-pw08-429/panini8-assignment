@@ -1,1 +1,1 @@
-export const BASE_URL = "http://localhost:5000/api";
+export const BASE_URL = "https://panini8-assignment-opn7.onrender.com/api";
