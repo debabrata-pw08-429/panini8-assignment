@@ -1,4 +1,3 @@
-// backend/app.js
 import express from "express";
 import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
@@ -7,7 +6,14 @@ import { notFound, errorHandler } from "./middlewares/errorMiddleware.js";
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://panini8-assignment-black.vercel.app",
+    methods: "GET, POST, PUT, DELETE, OPTIONS",
+    allowedHeaders: "Content-Type, Authorization",
+  })
+);
+
 app.use(express.json());
 
 // Routes
